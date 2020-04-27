@@ -145,7 +145,7 @@ class GenreFeatureData:
     def path_to_audiofiles(dir_folder):
         list_of_audio = []
         for file in os.listdir(dir_folder):
-            if file.endswith(".au"):
+            if file.endswith(".au") or file.endswith(".wav"):
                 directory = "%s/%s" % (dir_folder, file)
                 list_of_audio.append(directory)
         return list_of_audio
