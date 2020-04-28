@@ -5,6 +5,7 @@ import sys
 import numpy as np
 
 from keras.models import model_from_json
+from keras.models import load_model
 from GenreFeatureData import (
     GenreFeatureData,
 )  # local python class with Audio feature extraction and genre list
@@ -13,7 +14,7 @@ from GenreFeatureData import (
 logging.getLogger("tensorflow").setLevel(logging.ERROR)
 
 
-def load_model(model_path, weights_path):
+"""def load_model(model_path, weights_path):
     "Load the trained LSTM model from directory for genre classification"
     with open(model_path, "r") as model_file:
         trained_model = model_from_json(model_file.read())
@@ -21,7 +22,7 @@ def load_model(model_path, weights_path):
     trained_model.compile(
         loss="categorical_crossentropy", optimizer="adam", metrics=["accuracy"]
     )
-    return trained_model
+    return trained_model"""
 
 
 def extract_audio_features(file):
@@ -51,6 +52,6 @@ def get_genre(model, music_path):
 
 if __name__ == "__main__":
     PATH = sys.argv[1] if len(sys.argv) == 2 else "./audio/classical_music.mp3"
-    MODEL = load_model("./weights/model.json", "./weights/model_weights.h5")
+    MODEL = load_model("./lstm_genre_classifier_lstm.h5")
     GENRE = get_genre(MODEL, PATH)
     print("Model predict: {}".format(GENRE))
