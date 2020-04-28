@@ -20,12 +20,12 @@ class GenreFeatureData:
     dir_testfolder = "./gtzan/_test"
     dir_all_files = "./gtzan"
 
-    train_X_preprocessed_data = "/content/drive/My\ Drive/gtzan/data_train_input.npy"
-    train_Y_preprocessed_data = "/content/drive/My\ Drive/gtzan/data_train_target.npy"
-    dev_X_preprocessed_data = "/content/drive/My\ Drive/gtzan/data_validation_input.npy"
-    dev_Y_preprocessed_data = "/content/drive/My\ Drive/gtzan/data_validation_target.npy"
-    test_X_preprocessed_data = "/content/drive/My\ Drive/gtzan/data_test_input.npy"
-    test_Y_preprocessed_data = "/content/drive/My\ Drive/gtzan/data_test_target.npy"
+    train_X_preprocessed_data = "/content/drive/My Drive/gtzan/data_train_input.npy"
+    train_Y_preprocessed_data = "/content/drive/My Drive/gtzan/data_train_target.npy"
+    dev_X_preprocessed_data = "/content/drive/My Drive/gtzan/data_validation_input.npy"
+    dev_Y_preprocessed_data = "/content/drive/My Drive/gtzan/data_validation_target.npy"
+    test_X_preprocessed_data = "/content/drive/My Drive/gtzan/data_test_input.npy"
+    test_Y_preprocessed_data = "/content/drive/My Drive/gtzan/data_test_target.npy"
 
     train_X = train_Y = None
     dev_X = dev_Y = None
