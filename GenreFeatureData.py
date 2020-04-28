@@ -20,12 +20,12 @@ class GenreFeatureData:
     dir_testfolder = "./gtzan/_test"
     dir_all_files = "./gtzan"
 
-    train_X_preprocessed_data = "./gtzan/data_train_input.npy"
-    train_Y_preprocessed_data = "./gtzan/data_train_target.npy"
-    dev_X_preprocessed_data = "./gtzan/data_validation_input.npy"
-    dev_Y_preprocessed_data = "./gtzan/data_validation_target.npy"
-    test_X_preprocessed_data = "./gtzan/data_test_input.npy"
-    test_Y_preprocessed_data = "./gtzan/data_test_target.npy"
+    train_X_preprocessed_data = "/content/drive/My\ Drive/gtzan/data_train_input.npy"
+    train_Y_preprocessed_data = "/content/drive/My\ Drive/gtzan/data_train_target.npy"
+    dev_X_preprocessed_data = "/content/drive/My\ Drive/gtzan/data_validation_input.npy"
+    dev_Y_preprocessed_data = "/content/drive/My\ Drive/gtzan/data_validation_target.npy"
+    test_X_preprocessed_data = "/content/drive/My\ Drive/gtzan/data_test_input.npy"
+    test_Y_preprocessed_data = "/content/drive/My\ Drive/gtzan/data_test_target.npy"
 
     train_X = train_Y = None
     dev_X = dev_Y = None
@@ -58,7 +58,7 @@ class GenreFeatureData:
         print("[DEBUG] total number of files: " + str(len(self.timeseries_length_list)))
 
         # Training set
-        self.train_X, self.train_Y = self.extract_audio_features(self.trainfiles_list)
+        self.train_X, self.train_Y = self.extract_audio_features(self.trainfiles_list[:200])
         with open(self.train_X_preprocessed_data, "wb") as f:
             np.save(f, self.train_X)
         with open(self.train_Y_preprocessed_data, "wb") as f:
