@@ -1,9 +1,8 @@
-## Music Genre Classification with LSTMs
+## Music Discriminator with LSTMs
 
- * Classify music files based on genre from the GTZAN music corpus
- * GTZAN corpus is included for easy of use
+ * Discriminate music as being composed by humans or by a generative model.
  * Use multiple layers of LSTM Recurrent Neural Nets
- * Implementations in PyTorch, Keras ~& Darknet.~
+ * Implementations in PyTorch and Keras.
 
 ### Test trained LSTM model
  In the `./weights/` you can find trained model weights and model architecture.
@@ -32,28 +31,8 @@
     * `brew install libomp` 
 
 ### Ideas for improving accuracy:
- * [GTZAN dataset has problems](https://arxiv.org/abs/1306.1461), how do we use it with consideration?
  * Normalize MFCCs & other input features ([Recurrent BatchNorm](https://arxiv.org/pdf/1603.09025v4.pdf)?)
  * Decay learning rate
  * How are we initing the weights?
  * Better optimization hyperparameters (too little dropout)
  * Do you have avoidable bias? How's your variance?
-
-### Accuracy
-
- At Epoch 400, training on a TITAN X GPU (October 2017):
-
-|  | **Loss**  | **Accuracy** | 
-| ----- | ---- | ----- |
-| Training   | `0.5801`          | `0.7810`        |
-| Validation | `0.734523485104`  | `0.766666688025` |
-| Testing    | `0.900845060746`  | `0.683333342274` |
-
-
- At Epoch 400, training on a 2018 Macbook Pro CPU (May 2019):
-
-|  | **Loss**  | **Accuracy** | 
-| ----- | ---- | ----- |
-| Training   | `0.3486`          | `0.8738`        |
-| Validation | `1.028421084086`  | `0.700000017881` |
-| Testing    | `1.209656755129`  | `0.683333347241` |
