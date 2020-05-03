@@ -13,17 +13,14 @@
     _________________________________________________________________
     lstm_2 (LSTM)                (None, 32)                20608
     _________________________________________________________________
-    dense_1 (Dense)              (None, 8)                 264
+    dense_1 (Dense)              (None, 2)                 
     =================================================================
-    Total params: 103,816
-    Trainable params: 103,816
-    Non-trainable params: 0
 
     X shape (total # of training examples, sequence_length, input_dim)
     Y shape (total # of training examples, # output classes)
     ________________________________
-    Training X shape: (420, 128, 33)
-    Training Y shape: (420, 8)
+    Training X shape: (variable, 128, 33)
+    Training Y shape: (variable, 2)
     ________________________________
     Dev X shape: (120, 128, 33)
     Dev Y shape: (120, 8)
@@ -38,7 +35,7 @@
     An epoch, containing all training data (420 sequences), is divided into 12 mini-batches of
     length 35, i.e. each mini-batch has 35 sequences. An LSTM RNN (stack) loops over each sequence
     for sequence_length (128) steps computing an output value (of dimension 32) which is
-    transformed (via Dense layer) into 8 output classes
+    transformed (via Dense layer) into 2 output classes
 """
 
 import logging
